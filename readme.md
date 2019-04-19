@@ -6,6 +6,7 @@ How to run:
 
 
 
+
 Thought process and functionalities:
 
   The API call is made and processed in the AppCtrl, it's made by a service. After getting an answer from the API it then processes the downloaded info.
@@ -20,12 +21,13 @@ Thought process and functionalities:
 
 
 
+
 Possible future implementions:
 
-	*Starting date selection;
+  -Starting date selection;
   
-  *UI and UX improvements(animations, different fonts, etc);
+  -UI and UX improvements(animations, different fonts, etc);
 	
-  *City & Country selection;
+  -City & Country selection;
 	
-  *Icons for each forecast, wind, cloudiness,etc
+  -Icons for each forecast, wind, cloudiness,etc
