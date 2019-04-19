@@ -1,7 +1,7 @@
 
 
 How to run:
-	Considering you have ionic and npm all set up and ready to go, all you need to do to get it running is to use the command "ionic serve" on the command line 
+  Considering you have ionic and npm all set up and ready to go, all you need to do to get it running is to use the command "ionic serve" on the command line 
 
 
 
