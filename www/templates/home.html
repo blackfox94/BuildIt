@@ -1,0 +1,127 @@
+<ion-view>
+	<ion-content>
+
+	<div class="background">
+		<h1>WEATHER FORECAST</h1>
+
+			<!-- Container -->
+			<div class="container">
+
+				<!-- City -->
+				<div class="city">
+					<div class="title">
+						<h2>{{city}}</h2>
+						<h3>{{country | uppercase}}</h3>
+					</div>
+					<div class="days">
+						<div ng-repeat="(key,value) in weatherForecast">
+							<h1 ng-if="key === dateOrder[0]" id="{{key}}" ng-click="selectDay(key)" class="selected" >{{key}}</h1>
+							<h1 ng-if="key != dateOrder[0]" id="{{key}}" ng-click="selectDay(key)">{{key}}</h1>
+						</div>
+					</div>
+					<!-- <div class="date-time">
+						<div class="dmy">
+							<div id="txt"></div>
+							<div class="date">
+								Date-JavaScript 
+								<script type="text/javascript">
+								var mydate=new Date()
+								var year=mydate.getYear()
+								if(year<1000)
+								year+=1900
+								var day=mydate.getDay()
+								var month=mydate.getMonth()
+								var daym=mydate.getDate()
+								if(daym<10)
+								daym="0"+daym
+								var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+								var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+								document.write(""+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"")
+								</script>
+								//Date-JavaScript 
+							</div>
+						</div>
+						<div class="temperature">
+							<p>20°<span>C</span></p>
+						</div>
+						<div class="clear"></div>
+					</div>-->
+				</div>
+				<!-- //City -->
+
+
+
+				<!-- Forecast -->
+				<div class="forecast">
+					<div>
+					<h4 id="previous" ng-click="previousTime()">< </h4>
+					<h4>{{selectedTime}}</h4>
+					<h4 id="next" ng-click="nextTime()"> ></h4>
+					</div>
+					<div class="today-weather">
+
+						<p>Cloudiness:
+						{{item.clouds.all}} %</p>
+						<!--{{value.wind.deg}}°,--> 
+						<p>Wind: {{item.wind.speed}} m/s</p>
+
+						<p>Weather:
+						<!--<p>{{item.weather[0].main}}</p>-->
+						{{item.weather[0].description}}</p>
+
+						 <p>Humidity: {{item.info.humidity}} %</p>
+
+						<p>Temp: {{item.info.temp}} °C</p>
+						<p>Max Temp: {{item.info.temp_max}} °C</p>
+						<p>Min Temp: {{item.info.temp_min}} °C</p>
+						<p>Pressure: {{item.info.pressure}} hPa</p>
+					</div>
+				</div>
+				<!-- //Forecast -->
+				<div class="clear"></div>
+
+			</div>
+			<!-- //Container -->
+
+
+
+		<!-- Footer -->
+		<div class="footer">
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<p> &copy; Diogo Almeida</p>
+			</div>
+			<!-- //Copyright -->
+
+		</div>
+	</div>
+	<!-- //Footer -->
+	</ion-content>
+</ion-view>
+
+
+<!-- Custom-JavaScript-Files -->
+
+	<!-- Time-JavaScript -->
+	<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+			if (i < 10) {i = "0" + i}; // add zero in front of numbers < 10
+			return i;
+		}
+	</script>
+	<!-- //Time-JavaScript -->
+
+<!-- //Custom-JavaScript-File-Links -->
+
