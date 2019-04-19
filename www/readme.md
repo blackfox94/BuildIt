@@ -17,4 +17,4 @@ Possible future implementions:
 	*Starting date selection;
 	*UI and UX improvements(animations, different fonts, etc);
 	*City & Country selection;
-	*
+	*Icons for each forecast, wind, cloudiness,etc
